@@ -58,13 +58,18 @@
     <ul>
       <li>that a connection was attempted, succeeded, or failed (and a coarse failure reason);</li>
       <li>the proxy protocol chosen (HTTP / HTTPS / SOCKS4 / SOCKS5) as a category only;</li>
+      <li>a coarse category of the proxy (datacenter / residential / mobile), derived on your device
+        from the network operator's name — <strong>never the proxy address itself</strong>;</li>
+      <li>how long the proxy stayed switched on;</li>
+      <li>your country (country-level only, derived on your device — no city);</li>
       <li>interactions with buttons (Test, Get Proxy, Clear) and the light/dark theme toggle;</li>
       <li>the extension version and that a first-run screen was shown.</li>
     </ul>
     <p>Each event is tagged with a <strong>random identifier generated on your device</strong> (a UUID
     stored locally), which is not linked to your identity. We instruct our analytics processor to
-    <strong>discard IP addresses</strong> and to <strong>not build user profiles</strong>, so events are
-    not geolocated or tied to a person.</p>
+    <strong>discard IP addresses</strong> and to <strong>not build user profiles</strong>. Where we record
+    your country, it is <strong>country-level only</strong> (no city) and derived on your device, so events
+    are not tied to a person.</p>
 
     <h2>Who processes this data</h2>
     <p>Anonymous events are sent to <strong>PostHog</strong> (PostHog Cloud, <strong>US region</strong>),
@@ -106,13 +111,18 @@
     <ul>
       <li>что подключение было начато, удалось или не удалось (и грубую причину неудачи);</li>
       <li>выбранный протокол прокси (HTTP / HTTPS / SOCKS4 / SOCKS5) — только как категорию;</li>
+      <li>грубую категорию прокси (датацентр / резидентский / мобильный), вычисленную на вашем
+        устройстве по названию сетевого оператора — <strong>но не сам адрес прокси</strong>;</li>
+      <li>как долго прокси был включён;</li>
+      <li>вашу страну (только на уровне страны, вычислено на устройстве — без города);</li>
       <li>нажатия кнопок (Test, Get Proxy, Clear) и переключение светлой/тёмной темы;</li>
       <li>версию расширения и факт показа стартового экрана.</li>
     </ul>
     <p>Каждое событие помечено <strong>случайным идентификатором, сгенерированным на вашем устройстве</strong>
     (UUID, хранится локально) и не связанным с вашей личностью. Мы указываем нашему обработчику аналитики
-    <strong>отбрасывать IP-адреса</strong> и <strong>не строить профили пользователей</strong> — события не
-    геолоцируются и не привязываются к человеку.</p>
+    <strong>отбрасывать IP-адреса</strong> и <strong>не строить профили пользователей</strong>. Страна, если
+    записывается, — <strong>только на уровне страны</strong> (без города) и вычислена на устройстве, поэтому
+    события не привязываются к человеку.</p>
 
     <h2>Кто обрабатывает данные</h2>
     <p>Анонимные события отправляются в <strong>PostHog</strong> (PostHog Cloud, <strong>регион US</strong>),
